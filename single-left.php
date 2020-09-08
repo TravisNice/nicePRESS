@@ -2,12 +2,16 @@
 /**
  * The template for displaying all single posts
  *
+ * Template Name: Left Sidebar
+ * Template Post Type: post
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package NicePress
  */
 
 get_header();
+get_sidebar( 'left' );
 ?>
 
 	<main id="primary" class="site-main">

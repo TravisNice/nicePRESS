@@ -2,6 +2,9 @@
 /**
  * The template for displaying all single posts
  *
+ * Template Name: Wide Post
+ * Template Post Type: post
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package NicePress

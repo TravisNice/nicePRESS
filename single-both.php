@@ -2,12 +2,16 @@
 /**
  * The template for displaying all single posts
  *
+ * Template Name: Both Sidebars
+ * Template Post Type: post
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package NicePress
  */
 
 get_header();
+get_sidebar( 'left' );
 ?>
 
 	<main id="primary" class="site-main">
@@ -36,4 +40,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
+get_sidebar();
 get_footer();

@@ -646,15 +646,6 @@ textarea {
 div.site {
 	display: grid;
 	grid-gap: 10px;
-	grid-template-areas:
-		'menu'
-		'head'
-		'lbar'
-		'main'
-		'rbar'
-		'foot';
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(6, auto);
 }
 
 nav.main-navigation {
@@ -681,10 +672,92 @@ footer.site-footer {
 	grid-area: foot;
 }
 
-/* Make standard content width 600px */
+
+.blog div.site,
+.home div.site,
+.page-template-default div.site,
+.page-template-page-wide div.site,
+.post-template-default div.site,
+.post-template-single-wide div.site {
+	grid-template-areas:
+		'menu'
+		'head'
+		'main'
+		'foot';
+	grid-template-columns: 1fr;
+}
+
+.page-template-page-left div.site,
+.post-template-single-left div.site {
+	grid-template-areas:
+		'menu'
+		'head'
+		'lbar'
+		'main'
+		'foot';
+	grid-template-columns: 1fr;
+}
+
+.page-template-page-right div.site,
+.post-template-single-right div.site {
+	grid-template-areas:
+		'menu'
+		'head'
+		'main'
+		'rbar'
+		'foot';
+	grid-template-columns: 1fr;
+}
+
+.page-template-page-both div.site,
+.post-template-single-both div.site {
+	grid-template-areas:
+		'menu'
+		'head'
+		'lbar'
+		'main'
+		'rbar'
+		'foot';
+	grid-template-columns: 1fr;
+}
 
 @media screen and (min-width: 600px) {
-	div.site {
+
+	.blog div.site,
+	.page-template-default div.site,
+	.post-template-default div.site {
+		grid-template-areas:
+			'menu menu menu'
+			'head head head'
+			'.    main .   '
+			'foot foot foot';
+		grid-template-columns: 0.5fr 600px 0.5fr;
+	}
+
+	.page-template-page-left div.site,
+	.post-template-single-left div.site {
+		grid-template-areas:
+			'menu menu menu'
+			'head head head'
+			'.    lbar .   '
+			'.    main .   '
+			'foot foot foot';
+		grid-template-columns: 0.5fr 600px 0.5fr;
+	}
+
+	.page-template-page-right div.site,
+	.post-template-single-right div.site {
+		grid-template-areas:
+			'menu menu menu'
+			'head head head'
+			'.    main .   '
+			'.    rbar .   '
+			'foot foot foot';
+		grid-template-columns: 0.5fr 600px 0.5fr;
+	}
+
+	.page-template-page-both div.site,
+	.post-template-single-both div.site {
 		grid-template-areas:
 			'menu menu menu'
 			'head head head'
@@ -694,10 +767,45 @@ footer.site-footer {
 			'foot foot foot';
 		grid-template-columns: 0.5fr 600px 0.5fr;
 	}
+
 }
 
 @media screen and (min-width: 960px) {
-	div.site {
+
+	.page-template-page-wide div.site,
+	.post-template-single-wide div.site {
+		grid-template-areas:
+			'menu menu menu'
+			'head head head'
+			'.    main .   '
+			'foot foot foot';
+		grid-template-columns: 0.5fr 960px 0.5fr;
+	}
+
+	.page-template-page-left div.site,
+	.post-template-single-left div.site {
+		grid-template-areas:
+			'menu menu menu menu'
+			'head head head head'
+			'.    lbar main .   '
+			'.    .    main .   '
+			'foot foot foot foot';
+		grid-template-columns: 0.5fr 360px 600px 0.5fr;
+	}
+
+	.page-template-page-right div.site,
+	.post-template-single-right div.site {
+		grid-template-areas:
+			'menu menu menu menu'
+			'head head head head'
+			'.    main rbar .   '
+			'.    main .    .   '
+			'foot foot foot foot';
+		grid-template-columns: 0.5fr 600px 360px 0.5fr;
+	}
+
+	.page-template-page-both div.site,
+	.post-template-single-both div.site {
 		grid-template-areas:
 			'menu menu menu menu'
 			'head head head head'
@@ -707,10 +815,26 @@ footer.site-footer {
 			'foot foot foot foot';
 		grid-template-columns: 0.5fr 600px 360px 0.5fr;
 	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+	.home div.site {
+		grid-template-areas:
+			'menu menu menu'
+			'head head head'
+			'.    main .   '
+			'foot foot foot';
+		grid-template-columns: 0.5fr 1200px 0.5fr;
+	}
+
 }
 
 @media screen and (min-width: 1320px) {
-	div.site {
+
+	.page-template-page-both div.site,
+	.post-template-single-both div.site {
 		grid-template-areas:
 			'menu menu menu menu menu'
 			'head head head head head'
@@ -719,6 +843,7 @@ footer.site-footer {
 			'foot foot foot foot foot';
 		grid-template-columns: 0.5fr 360px 600px 360px 0.5fr;
 	}
+
 }
 
 /*--------------------------------------------------------------

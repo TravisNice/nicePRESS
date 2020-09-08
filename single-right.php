@@ -2,6 +2,9 @@
 /**
  * The template for displaying all single posts
  *
+ * Template Name: Right Sidebar
+ * Template Post Type: post
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package NicePress
@@ -36,4 +39,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
+get_sidebar();
 get_footer();
