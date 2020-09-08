@@ -13,10 +13,10 @@
  */
 
 get_header();
-get_sidebar( 'left' );
 ?>
 
 	<main id="primary" class="site-main">
+		<h1><em>This is the index.php template</em></h1>
 
 		<?php
 		if ( have_posts() ) :
@@ -54,5 +54,4 @@ get_sidebar( 'left' );
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

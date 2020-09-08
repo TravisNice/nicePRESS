@@ -724,6 +724,7 @@ footer.site-footer {
 @media screen and (min-width: 600px) {
 
 	.blog div.site,
+	.home.blog div.site,
 	.page-template-default div.site,
 	.post-template-default div.site {
 		grid-template-areas:
