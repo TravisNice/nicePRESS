@@ -112,7 +112,7 @@ add_action( 'after_setup_theme', 'nicepress_setup' );
  * @global int $content_width
  */
 function nicepress_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'nicepress_content_width', 640 );
+	//$GLOBALS['content_width'] = apply_filters( 'nicepress_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'nicepress_content_width', 0 );
 
@@ -124,8 +124,20 @@ add_action( 'after_setup_theme', 'nicepress_content_width', 0 );
 function nicepress_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'nicepress' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Left Sidebar', 'nicepress' ),
+			'id'            => 'sidebar-left',
+			'description'   => esc_html__( 'Add widgets here.', 'nicepress' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Right Sidebar', 'nicepress' ),
+			'id'            => 'sidebar-right',
 			'description'   => esc_html__( 'Add widgets here.', 'nicepress' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

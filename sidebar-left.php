@@ -7,11 +7,11 @@
  * @package NicePress
  */
 
-if ( ! is_active_sidebar( 'sidebar-right' ) ) {
+if ( ! is_active_sidebar( 'sidebar-left' ) ) {
 	return;
 }
 ?>
 
-<aside id="sidebar-right" class="widget-area right">
-	<?php dynamic_sidebar( 'sidebar-right' ); ?>
+<aside id="sidebar-left" class="widget-area left">
+	<?php dynamic_sidebar( 'sidebar-left' ); ?>
 </aside><!-- #secondary -->

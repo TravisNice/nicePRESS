@@ -13,6 +13,7 @@
  */
 
 get_header();
+get_sidebar( 'left' );
 ?>
 
 	<main id="primary" class="site-main">

@@ -641,6 +641,86 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+/* Mobile First */
+
+div.site {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas:
+		'menu'
+		'head'
+		'lbar'
+		'main'
+		'rbar'
+		'foot';
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, auto);
+}
+
+nav.main-navigation {
+	grid-area: menu;
+}
+
+header.site-header {
+	grid-area: head;
+}
+
+aside.left {
+	grid-area: lbar;
+}
+
+main.site-main {
+	grid-area: main;
+}
+
+aside.right {
+	grid-area: rbar;
+}
+
+footer.site-footer {
+	grid-area: foot;
+}
+
+/* Make standard content width 600px */
+
+@media screen and (min-width: 600px) {
+	div.site {
+		grid-template-areas:
+			'menu menu menu'
+			'head head head'
+			'.    lbar .   '
+			'.    main .   '
+			'.    rbar .   '
+			'foot foot foot';
+		grid-template-columns: 0.5fr 600px 0.5fr;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	div.site {
+		grid-template-areas:
+			'menu menu menu menu'
+			'head head head head'
+			'.    main lbar .   '
+			'.    main rbar .   '
+			'.    main .    .   '
+			'foot foot foot foot';
+		grid-template-columns: 0.5fr 600px 360px 0.5fr;
+	}
+}
+
+@media screen and (min-width: 1320px) {
+	div.site {
+		grid-template-areas:
+			'menu menu menu menu menu'
+			'head head head head head'
+			'.    lbar main rbar .   '
+			'.    .    main .    .   '
+			'foot foot foot foot foot';
+		grid-template-columns: 0.5fr 360px 600px 360px 0.5fr;
+	}
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
