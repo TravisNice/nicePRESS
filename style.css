@@ -852,6 +852,16 @@ footer.site-footer {
    Components
 ----------------------------------------------------------------------------- */
 
+.site-header {
+	margin: 0.5em 1em;
+}
+
+.site-footer {
+	border-top-style: solid;
+	border-top-color: inherit;
+	text-align: center;
+}
+
 /* Navigation
 ----------------------------------------------------------------------------- */
 
@@ -943,10 +953,6 @@ footer.site-footer {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
-}
-
-.site-header {
-	margin: 0.5em 1em;
 }
 
 /* Comments
