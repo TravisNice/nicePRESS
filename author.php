@@ -8,6 +8,23 @@
  */
 
 get_header();
+
+$np_avatar_args = array(
+        // get_avatar_data() args.
+        'size'          => 96,
+        'height'        => null,
+        'width'         => null,
+        'default'       => get_option( 'avatar_default', 'mystery' ),
+        'force_default' => false,
+        'rating'        => get_option( 'avatar_rating' ),
+        'scheme'        => null,
+        'alt'           => '',
+        'class'         => 'alignleft',
+        'force_display' => false,
+        'loading'       => null,
+        'extra_attr'    => '',
+    );
+
 ?>
 
 	<main id="primary" class="site-main">
@@ -17,6 +34,7 @@ get_header();
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				echo get_avatar( get_post_field( 'post_author', $post_id ), 96, '', '', $np_avatar_args );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->

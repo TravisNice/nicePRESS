@@ -673,7 +673,7 @@ footer.site-footer {
 	grid-area: foot;
 }
 
-
+.archive div.site,
 .blog div.site,
 .home div.site,
 .page-template-default div.site,
@@ -724,6 +724,8 @@ footer.site-footer {
 
 @media screen and (min-width: 37.5em) {
 
+
+	.archive div.site,
 	.blog div.site,
 	.home.blog div.site,
 	.page-template-default div.site,
@@ -774,6 +776,7 @@ footer.site-footer {
 
 @media screen and (min-width: 60em) {
 
+	.archive div.site,
 	.page-template-page-wide div.site,
 	.post-template-single-wide div.site {
 		grid-template-areas:
@@ -860,6 +863,11 @@ footer.site-footer {
 	border-top-style: solid;
 	border-top-color: inherit;
 	text-align: center;
+	margin-bottom: 2em;
+}
+
+.site a {
+	text-decoration: none;
 }
 
 /* Navigation
@@ -978,6 +986,22 @@ footer.site-footer {
 	text-align: right;
 }
 
+.entry-header a {
+	text-decoration: none;
+}
+
+.cat-links,
+.comments-link,
+.tags-links,
+.edit-link {
+	display: inline-block;
+	width: 100%;
+}
+
+.moretag {
+	margin-left: 1em;
+}
+
 /* Comments
 --------------------------------------------- */
 
@@ -1003,10 +1027,6 @@ footer.site-footer {
 	border-bottom-color: inherit;
 }
 
-.comment-edit-link {
-	margin-left: 1em;
-}
-
 .comment-body {
 	margin: 1em 0;
 }
@@ -1017,8 +1037,7 @@ footer.site-footer {
 .comment-form-email > input,
 .comment-form-url > label,
 .comment-form-url > input {
-	display: block;
-	float: left;
+	display: inline-block;
 	width: 100%;
 }
 

@@ -164,6 +164,15 @@ function nicepress_scripts() {
 add_action( 'wp_enqueue_scripts', 'nicepress_scripts' );
 
 /**
+ * Replaces the excerpt "Read More" text by a link
+ */
+function new_excerpt_more( $more ) {
+	global $post;
+	return '<a class="moretag" href="'. get_permalink($post->ID) . '">Continue Reading ...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
