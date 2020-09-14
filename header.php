@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nicepress' ); ?></a>
 
 	<nav id="site-navigation" class="main-navigation">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nicepress' ); ?></button>
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '&equiv;', 'nicepress' ); ?></button>
 		<?php
 		wp_nav_menu(
 			array(
@@ -57,7 +57,7 @@
 			$nicepress_description = get_bloginfo( 'description', 'display' );
 			if ( $nicepress_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $nicepress_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p class="site-description"><em><?php echo $nicepress_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></em></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
