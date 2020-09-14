@@ -164,18 +164,14 @@ function nicepress_scripts() {
 add_action( 'wp_enqueue_scripts', 'nicepress_scripts' );
 
 /**
- * Replaces the excerpt "Read More" text by a link
+ * Replaces the excerpt "Read More" text by a link when displaying excerpts
+ * like in the blog roll.
  */
 function new_excerpt_more( $more ) {
 	global $post;
 	return '<a class="moretag" href="'. get_permalink($post->ID) . '">Continue Reading ...</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -191,6 +187,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Header
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Load Jetpack compatibility file.

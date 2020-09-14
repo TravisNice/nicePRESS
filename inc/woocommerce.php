@@ -145,11 +145,11 @@ add_action( 'woocommerce_after_main_content', 'nicepress_woocommerce_wrapper_aft
  *
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
-	<?php
-		if ( function_exists( 'nicepress_woocommerce_header_cart' ) ) {
-			nicepress_woocommerce_header_cart();
-		}
-	?>
+ *	<?php
+ *		if ( function_exists( 'nicepress_woocommerce_header_cart' ) ) {
+ *			nicepress_woocommerce_header_cart();
+ *		}
+ *	?>
  */
 
 if ( ! function_exists( 'nicepress_woocommerce_cart_link_fragment' ) ) {

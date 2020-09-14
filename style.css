@@ -544,6 +544,7 @@ a:hover,
 a:focus,
 a:active {
 	color: #191970;
+	transition: 0.66s;
 }
 
 a:focus {
@@ -645,7 +646,6 @@ textarea {
 
 div.site {
 	display: grid;
-	grid-gap: 10px;
 }
 
 nav.main-navigation {
@@ -662,7 +662,6 @@ aside.left {
 
 main.site-main {
 	grid-area: main;
-	padding: 0.5em 1em;
 }
 
 aside.right {
@@ -776,7 +775,6 @@ footer.site-footer {
 
 @media screen and (min-width: 60em) {
 
-	.archive div.site,
 	.page-template-page-wide div.site,
 	.post-template-single-wide div.site {
 		grid-template-areas:
@@ -856,6 +854,11 @@ footer.site-footer {
 ----------------------------------------------------------------------------- */
 
 .site-header {
+	margin: 0;
+	width: 100%;
+}
+
+.site-branding {
 	margin: 0.5em 1em;
 }
 
@@ -986,16 +989,17 @@ footer.site-footer {
 	text-align: right;
 }
 
-.entry-header a {
-	text-decoration: none;
-}
-
 .cat-links,
 .comments-link,
 .tags-links,
 .edit-link {
 	display: inline-block;
 	width: 100%;
+}
+
+.entry-title {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .moretag {

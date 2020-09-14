@@ -11,6 +11,129 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function nicepress_customize_register( $wp_customize ) {
+
+	/**
+	 * Customise the links in the menu
+	 */
+
+	$wp_customize->add_setting(
+		'np_menu_link_color',
+		array(
+			'default' => '#000000',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'np_menu_link_color',
+			array(
+				'label' => __( 'Menu Item Color', 'nicepress' ),
+				'section' => 'colors',
+				'settings' => 'np_menu_link_color',
+			)
+		)
+	);
+
+       $wp_customize->add_setting(
+	       'np_current_menu_link_color',
+	       array(
+		       'default' => '#000000',
+		       'sanitize_callback' => 'sanitize_hex_color',
+	       )
+       );
+       $wp_customize->add_control(
+	       new WP_Customize_Color_Control(
+		       $wp_customize,
+		       'np_current_menu_link_color',
+		       array(
+			       'label' => __( 'Current Menu Item Color', 'nicepress' ),
+			       'section' => 'colors',
+			       'settings' => 'np_current_menu_link_color',
+		       )
+	       )
+       );
+
+      $wp_customize->add_setting(
+	      'np_hover_menu_link_color',
+	      array(
+		      'default' => '#000000',
+		      'sanitize_callback' => 'sanitize_hex_color',
+	      )
+      );
+      $wp_customize->add_control(
+	      new WP_Customize_Color_Control(
+		      $wp_customize,
+		      'np_hover_menu_link_color',
+		      array(
+			      'label' => __( 'Menu Item Hover Color', 'nicepress' ),
+			      'section' => 'colors',
+			      'settings' => 'np_hover_menu_link_color',
+		      )
+	      )
+      );
+
+     $wp_customize->add_setting(
+	     'np_border_color',
+	     array(
+		     'default' => '#000000',
+		     'sanitize_callback' => 'sanitize_hex_color',
+	     )
+     );
+     $wp_customize->add_control(
+	     new WP_Customize_Color_Control(
+		     $wp_customize,
+		     'np_border_color',
+		     array(
+			     'label' => __( 'Border Color', 'nicepress' ),
+			     'section' => 'colors',
+			     'settings' => 'np_border_color',
+		     )
+	     )
+     );
+
+    $wp_customize->add_setting(
+	    'np_link_color',
+	    array(
+		    'default' => '#000000',
+		    'sanitize_callback' => 'sanitize_hex_color',
+	    )
+    );
+    $wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+		    $wp_customize,
+		    'np_link_color',
+		    array(
+			    'label' => __( 'Link Color', 'nicepress' ),
+			    'section' => 'colors',
+			    'settings' => 'np_link_color',
+		    )
+	    )
+    );
+
+   $wp_customize->add_setting(
+	   'np_link_hover_color',
+	   array(
+		   'default' => '#000000',
+		   'sanitize_callback' => 'sanitize_hex_color',
+	   )
+   );
+   $wp_customize->add_control(
+	   new WP_Customize_Color_Control(
+		   $wp_customize,
+		   'np_link_hover_color',
+		   array(
+			   'label' => __( 'Link Hover Color', 'nicepress' ),
+			   'section' => 'colors',
+			   'settings' => 'np_link_hover_color',
+		   )
+	   )
+   );
+
+	/**
+	 * Originally from the _S theme
+	 */
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
