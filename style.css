@@ -955,8 +955,79 @@ footer.site-footer {
 	margin: 0 0 1.5em;
 }
 
+.navigation {
+	display: block;
+	float: left;
+	margin-bottom: 2em;
+	width: 100%;
+}
+
+.nav-links {
+	display: block;
+	width: 100%;
+}
+
+.nav-previous,
+.nav-next {
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+.nav-next {
+	text-align: right;
+}
+
 /* Comments
 --------------------------------------------- */
+
+.comment,
+.comment-list {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.comments-area {
+	border-top-style: dotted;
+	border-top-width: thin;
+	border-top-color: inherit;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.comment-list > .comment {
+	border-bottom-style: dotted;
+	border-bottom-width: thin;
+	border-bottom-color: inherit;
+}
+
+.comment-edit-link {
+	margin-left: 1em;
+}
+
+.comment-body {
+	margin: 1em 0;
+}
+
+.comment-form-author > label,
+.comment-form-author > input,
+.comment-form-email > label,
+.comment-form-email > input,
+.comment-form-url > label,
+.comment-form-url > input {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.comment-form-author > input,
+.comment-form-email > input,
+.comment-form-url > input {
+	margin-bottom: 1em;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
