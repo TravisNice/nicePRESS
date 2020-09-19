@@ -24,7 +24,7 @@
 					<span class="sep">&nbsp;|&nbsp;</span>
 						<?php
 						/* translators: 1: Theme name, 2: Theme author. */
-						printf( esc_html__( 'Theme: %1$s by %2$s.', 'nicepress' ), 'NicePress', '<a href="https://www.nice.id.au/">Travis Nice</a>' );
+						printf( esc_html__( 'Theme: %1$s by %2$s.', 'nicepress' ), 'NicePress', '<a href="https://www.nice.id.au/design">Travis Nice</a>' );
 						?>
 				</em>
 			</small>
