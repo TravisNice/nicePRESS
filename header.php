@@ -20,13 +20,13 @@
 	<?php wp_head(); ?>
 
 	<style type="text/css" id="custom-theme-colors">
+	        .site-main, aside.left, aside.right { background-color: <?php echo get_theme_mod( 'np_content_background_color' ); ?>; color: <?php echo get_theme_mod( 'np_content_color' ); ?>; }
 		.main-navigation a {color: <?php echo get_theme_mod('np_menu_link_color'); ?>;}
 		.main-navigation a:hover {color: <?php echo get_theme_mod('np_hover_menu_link_color'); ?>;}
 		.current-menu-item a {color: <?php echo get_theme_mod('np_current_menu_link_color'); ?>;}
-		.main-navigation {border-bottom-color: <?php echo get_theme_mod('np_border_color'); ?>;}
-		.site-footer {border-top-color: <?php echo get_theme_mod('np_border_color'); ?>;}
-		.site-main a, .site-footer a {color: <?php echo get_theme_mod('np_link_color'); ?>;}
-		.site-main a:hover, .site-footer a:hover {color:<?php echo get_theme_mod('np_link_hover_color'); ?>;}
+		.main-navigation, .site-footer {border-color: <?php echo get_theme_mod('np_border_color'); ?>;}
+	        .site-main a, .site-footer a, aside.left a, aside.right a {color: <?php echo get_theme_mod('np_link_color'); ?>;}
+		.site-main a:hover, .site-footer a:hover, aside.left a:hover, aside.right a:hover {color: <?php echo get_theme_mod('np_link_hover_color'); ?>;}
 	</style>
 </head>
 

@@ -642,6 +642,12 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+.site-footer {
+}
+
+.site a {
+    text-decoration: none;
+}
 /* Mobile First */
 
 div.site {
@@ -649,27 +655,41 @@ div.site {
 }
 
 nav.main-navigation {
+    border-bottom-style: solid;
 	grid-area: menu;
 }
 
 header.site-header {
 	grid-area: head;
+    margin: 0;
+    padding: 0.5em 1em;
+    width: 100%;
 }
 
 aside.left {
 	grid-area: lbar;
+    margin: 0.5em 1em;
+    padding: 0.5em 1em;
 }
 
 main.site-main {
 	grid-area: main;
+    margin: 0.5em 1em;
+    padding: 0.5em 1em;
 }
 
 aside.right {
 	grid-area: rbar;
+    margin: 0.5em 1em;
+    padding: 0.5em 1em;
 }
 
 footer.site-footer {
+    border-top-style: solid;
 	grid-area: foot;
+    margin: 0.5em 1em;
+    padding: 0.5em 1em;
+    text-align: center;
 }
 
 .archive div.site,
@@ -849,37 +869,8 @@ footer.site-footer {
 
 }
 
-/* ----------------------------------------------------------------------------+
-   Components
------------------------------------------------------------------------------ */
-
-.site-header {
-	margin: 0;
-	width: 100%;
-}
-
-.site-branding {
-	margin: 0.5em 1em;
-}
-
-.site-footer {
-	border-top-style: solid;
-	border-top-color: inherit;
-	text-align: center;
-	margin-bottom: 2em;
-}
-
-.site a {
-	text-decoration: none;
-}
-
 /* Navigation
 ----------------------------------------------------------------------------- */
-
-.main-navigation {
-	border-bottom-style: solid;
-	border-bottom-color: inherit;
-}
 
 .menu {
 	display: none;

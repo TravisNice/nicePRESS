@@ -11,6 +11,52 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function nicepress_customize_register( $wp_customize ) {
+    /**
+     * The background color chooser is already provided as part of the custom header.
+     * Now we add in a background color for the content areas.
+     */
+
+    $wp_customize->add_setting(
+        'np_content_background_color',
+        array(
+            'default' => '#ffffff',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'np_content_background_color',
+            array(
+                'label' => __( 'Content Area Background Color', 'nicepress' ),
+                'section' => 'colors',
+                'settings' => 'np_content_background_color',
+            )
+        )
+    );
+
+    /**
+     * Give people a choice over what color font to use so they can use a light font on a dark background if they so desire.
+     */
+
+    $wp_customize->add_setting(
+        'np_content_color',
+        array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'np_content_color',
+            array(
+                'label' => __( 'Font Color', 'nicepress' ),
+                'section' => 'colors',
+                'settings' => 'np_content_color',
+            )
+        )
+    );
 
 	/**
 	 * Customise the links in the menu
