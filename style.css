@@ -642,54 +642,49 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
-.site-footer {
-}
-
-.site a {
-    text-decoration: none;
-}
 /* Mobile First */
 
 div.site {
 	display: grid;
+	text-decoration: none;
 }
 
 nav.main-navigation {
-    border-bottom-style: solid;
+	border-bottom-style: solid;
 	grid-area: menu;
 }
 
 header.site-header {
 	grid-area: head;
-    margin: 0;
-    padding: 0.5em 1em;
-    width: 100%;
+	margin: 0;
+	padding: 0.5em 1em;
+	width: 100%;
 }
 
 aside.left {
 	grid-area: lbar;
-    margin: 0.5em 1em;
-    padding: 0.5em 1em;
+	margin: 0.5em 1em;
+	padding: 0.5em 1em;
 }
 
 main.site-main {
 	grid-area: main;
-    margin: 0.5em 1em;
-    padding: 0.5em 1em;
+	margin: 0.5em 1em;
+	padding: 0.5em 1em;
 }
 
 aside.right {
 	grid-area: rbar;
-    margin: 0.5em 1em;
-    padding: 0.5em 1em;
+	margin: 0.5em 1em;
+	padding: 0.5em 1em;
 }
 
 footer.site-footer {
-    border-top-style: solid;
+	border-top-style: solid;
 	grid-area: foot;
-    margin: 0.5em 1em;
-    padding: 0.5em 1em;
-    text-align: center;
+	margin: 0;
+	padding: 0.5em 1em;
+	text-align: center;
 }
 
 .archive div.site,
