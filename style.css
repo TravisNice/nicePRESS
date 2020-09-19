@@ -1060,6 +1060,23 @@ footer.site-footer {
 	max-width: 100%;
 }
 
+.widget ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.widget li {
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: inherit;
+	padding: 0.5em 1em;
+}
+
+.widget li:last-child {
+	border-bottom: none;
+}
+
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley,

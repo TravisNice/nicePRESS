@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 
 	<style type="text/css" id="custom-theme-colors">
-	        .site-main, aside.left, aside.right { background-color: <?php echo get_theme_mod( 'np_content_background_color' ); ?>; color: <?php echo get_theme_mod( 'np_content_color' ); ?>; }
+	        .site-main, aside.left, aside.right, .widget { background-color: <?php echo get_theme_mod( 'np_content_background_color' ); ?>; color: <?php echo get_theme_mod( 'np_content_color' ); ?>; }
 		.main-navigation a {color: <?php echo get_theme_mod('np_menu_link_color'); ?>;}
 		.main-navigation a:hover {color: <?php echo get_theme_mod('np_hover_menu_link_color'); ?>;}
 		.current-menu-item a {color: <?php echo get_theme_mod('np_current_menu_link_color'); ?>;}
