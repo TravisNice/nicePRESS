@@ -863,6 +863,37 @@ footer.site-footer {
 
 }
 
+.allow-wide {
+	overflow-x: visible;
+	white-space: nowrap;
+}
+
+.allow-wide > table {
+	max-width: 100%;
+	left: 50%;
+	transform: translate(-50%,0);
+	position: relative;
+	font-size: 50%;
+}
+
+th, td {
+	margin: 0 !important;
+}
+
+table thead tr th {
+	border-bottom: solid thick black !important;
+}
+
+table tfoot tr td {
+	border-top: solid thick black !important;
+}
+
+table thead tr th {
+	border-top: solid thin black !important;
+	border-left: solid thin black !important;
+	border-right: solid thin black !important;
+}
+
 /* Navigation
 ----------------------------------------------------------------------------- */
 
